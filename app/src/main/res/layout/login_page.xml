@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:id="@+id/root"
+    tools:context="com.sydehealth.sydehealth.main.Login_activity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="matrix"
+        android:background="@drawable/background_new" />
+
+
+    <com.sydehealth.sydehealth.utility.LockableScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/main_scrollview"
+        android:scrollbars="none"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_77sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    android:src="@drawable/logo_new" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/_123sdp"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:id="@+id/login_view"
+                    android:layout_marginTop="@dimen/_23sdp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/EditTextTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:id="@+id/email_layer"
+                        android:visibility="visible"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:background="@drawable/white_round_bg"
+                        android:textColorHint="@color/gray"
+                        app:hintTextAppearance="@style/EditTextTheme">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/email_field"
+                            style="@style/EditTextTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:hint="@string/email_hint"
+                            android:imeOptions="actionNext|flagNoExtractUi|flagNoFullscreen"
+                            android:inputType="textNoSuggestions|textEmailAddress"
+                            android:nextFocusDown="@+id/pswd"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:paddingRight="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray"
+                            android:textSize="@dimen/_8sdp"
+                            android:privateImeOptions="nm"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/email_field_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:gravity="center|right"
+                        android:text=""
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/_5sdp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/EditTextTheme"
+                        android:id="@+id/pswd_layer"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@drawable/white_round_bg"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:textColorHint="@color/gray"
+                        app:hintTextAppearance="@style/EditTextTheme">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/pswd"
+                            style="@style/EditTextTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:hint="@string/pswd"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:paddingRight="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:inputType="textNoSuggestions|textWebPassword"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray"
+                            android:textSize="@dimen/_8sdp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/pswd_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:gravity="center|right"
+                        android:text=""
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/_5sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:gravity="start"
+                        android:orientation="horizontal">
+                        <CheckBox
+                            android:id="@+id/switch_view"
+                            android:layout_width="wrap_content"
+                            android:padding="6dp"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/cb_selector"
+                            android:text="@string/remember_btn"
+                            android:textSize="@dimen/_8sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_123sdp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sign_in_btn_layer"
+                        android:gravity="end"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/login_btn"
+                            android:layout_width="@dimen/_55sdp"
+                            android:layout_height="@dimen/_23sdp"
+                            android:background="@drawable/edit_round_pink_bg"
+                            android:text="@string/login_btn"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_8sdp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/forgot_layout"
+                        android:layout_width="@dimen/_123sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_50sdp"
+                        android:gravity="center|bottom"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/forgot_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:gravity="center"
+                            android:text="@string/forgot_txt"
+                            android:textAllCaps="false"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/_8sdp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_123sdp"
+                        android:layout_height="@dimen/_150sdp">
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </com.sydehealth.sydehealth.utility.LockableScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/keyboard_extra_key"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_height="@dimen/_20sdp"
+            android:background="#DBDDE2">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8sdp"
+                android:textAllCaps="false"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:background="@drawable/rounded_key"
+                android:text="@string/yahoo"
+                android:id="@+id/yahoo_txt"
+                android:gravity="center"
+                android:layout_height="@dimen/_17sdp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8sdp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:background="@drawable/rounded_key"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:id="@+id/outlook_txt"
+                android:text="@string/outlook"
+                android:layout_height="@dimen/_17sdp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8sdp"
+                android:gravity="center"
+                android:paddingLeft="@dimen/_5sdp"
+                android:background="@drawable/rounded_key"
+                android:paddingRight="@dimen/_5sdp"
+                android:textAllCaps="false"
+                android:id="@+id/gmail_txt"
+                android:text="@string/gmail"
+                android:layout_height="@dimen/_17sdp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_26sdp"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:orientation="horizontal"
+        android:gravity="center|left">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/back"
+            android:gravity="center|left"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/ic_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/back_awsom"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_marginRight="@dimen/_6sdp"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:text="@string/login_back"
+                android:id="@+id/forgot_label"
+                android:textColor="@color/gray"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/wifi_btn"
+            android:gravity="center|right"
+            android:layout_height="@dimen/_60sdp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_wifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sett_text_size" />
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="false"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@mipmap/wifi_icon" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center|left"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/wifi_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/_22sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sett_text_size" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_condition"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_height="@dimen/_30sdp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".9"
+                android:visibility="visible"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/popup_conditions"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Conditions"
+                    android:gravity="center_vertical"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_marginLeft="@dimen/_40sdp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".1"
+                android:visibility="visible"
+                android:layout_height="match_parent">
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:src="@mipmap/white_cross"
+                    android:id="@+id/popup_cross_grid"
+                    android:background="@android:color/transparent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <GridView
+            android:id="@+id/gridView_pop"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:numColumns="4"
+            android:scrollbars="vertical"
+            android:horizontalSpacing="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:layout_height="match_parent">
+
+        </GridView>
+    </LinearLayout>
+
+
+
+</LinearLayout>

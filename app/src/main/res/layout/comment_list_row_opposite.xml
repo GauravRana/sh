@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutAnimation="@anim/layoutanimation"
+    tools:layoutAnimation="@null"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center|top"
+        android:padding="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_3sdp"
+        android:layout_marginLeft="@dimen/_3sdp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".55"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_6sdp"
+                android:lineSpacingExtra="@dimen/mail_line_space"
+                android:gravity="center|left"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:textColor="@color/black_mail_text"
+                android:id="@+id/treatment_title_opp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/mail_text_size"
+                android:lineSpacingExtra="@dimen/mail_line_space"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_4sdp"
+                android:paddingRight="@dimen/_3sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:gravity="center|left"
+                android:id="@+id/treatment_text_opp"
+                android:textColor="@color/black_mail_text"/>
+        </LinearLayout>
+
+        <com.sydehealth.sydehealth.utility.BImageView
+            android:layout_weight=".45"
+            android:layout_width="0dp"
+            android:id="@+id/treatment_img_opp"
+            android:layout_margin="@dimen/_2sdp"
+            android:src="@mipmap/condition_thumb"
+            android:layout_height="@dimen/_60sdp" />
+    </LinearLayout>
+
+</LinearLayout>

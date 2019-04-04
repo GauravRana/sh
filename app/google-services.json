@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "958699472011",
+    "firebase_url": "https://sydehealth-3bead.firebaseio.com",
+    "project_id": "sydehealth-3bead",
+    "storage_bucket": "sydehealth-3bead.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:958699472011:android:cc5c9a6ad73ebe1b",
+        "android_client_info": {
+          "package_name": "com.sydehealth.sydehealth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "958699472011-lslccgs5d04t93f6tetfahu0i1iq7dd0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWnQ8coALmJa8ULUah2LHo0bnJ9vA9pRw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

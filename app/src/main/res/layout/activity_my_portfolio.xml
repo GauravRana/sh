@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_new"
+    tools:context=".main.MyPortfolioActivity"
+    android:layoutAnimation="@anim/email_layout_animation"
+    tools:layoutAnimation="@null">
+
+    <com.sydehealth.sydehealth.utility.CustomSwipeToRefresh
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:id="@+id/tv_portfolio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtPort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="My Portfolio"
+                    android:textSize="@dimen/_14sdp" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iv_insta"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:src="@drawable/ic_insta" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/lay_previw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_portfolio">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/lay_previw_inner"
+                    android:layout_width="@dimen/_360sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@android:color/transparent">
+
+                    <com.sydehealth.sydehealth.utility.TouchImageView
+                        android:id="@+id/iv_preview_image"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:adjustViewBounds="true"
+                        android:background="@color/transparentGray"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/image_placeholder"
+                        app:layout_constraintDimensionRatio="H,16:9"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageButton
+                    android:id="@+id/iv_left"
+                    android:layout_width="@dimen/_31sdp"
+                    android:layout_height="@dimen/_31sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:layout_toLeftOf="@+id/lay_previw_inner"
+                    android:background="@drawable/circle_pink"
+                    android:elevation="@dimen/_4sdp"
+                    android:src="@drawable/left_arrow"
+                    android:textSize="@dimen/_15sdp"
+                    android:visibility="visible" />
+
+
+                <ImageButton
+                    android:id="@+id/iv_right"
+                    android:layout_width="@dimen/_31sdp"
+                    android:layout_height="@dimen/_31sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:layout_toRightOf="@+id/lay_previw_inner"
+                    android:background="@drawable/circle_pink"
+                    android:elevation="@dimen/_4sdp"
+                    android:rotation="180"
+                    android:src="@drawable/left_arrow"
+                    android:textSize="@dimen/_15sdp"
+                    android:visibility="visible" />
+
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="@dimen/_350sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lay_previw"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/txt_no_images"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:text="There are no images in portfolio"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_portfolio"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_90sdp"
+                    android:overScrollMode="never" />
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </com.sydehealth.sydehealth.utility.CustomSwipeToRefresh>
+
+    <ImageButton
+        android:id="@+id/iv_back"
+        android:layout_width="@dimen/_31sdp"
+        android:layout_height="@dimen/_31sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:background="@drawable/black_circle_layout"
+        android:elevation="@dimen/_4sdp"
+        android:src="@drawable/ic_back"
+        android:text="@string/ic_back"
+        android:textSize="@dimen/_15sdp" />
+
+</RelativeLayout>

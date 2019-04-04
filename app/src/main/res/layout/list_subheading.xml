@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" >
+
+    <com.sydehealth.sydehealth.utility.CustomTextView
+        android:id="@+id/textCat_subheading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:textSize="@dimen/_8sdp"
+        android:textColor="@color/black"
+        >
+    </com.sydehealth.sydehealth.utility.CustomTextView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".7dp"
+        android:visibility="visible"
+        android:background="@color/trans"
+        />
+</LinearLayout>

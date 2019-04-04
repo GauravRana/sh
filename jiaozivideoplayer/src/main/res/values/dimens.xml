@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="jz_start_button_w_h_normal">80dp</dimen>
+    <dimen name="jz_start_button_w_h_fullscreen">80dp</dimen>
+</resources>

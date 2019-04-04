@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="@dimen/_20sdp"
+            android:id="@+id/padding_layout_trtmnt"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_3sdp"
+            android:clickable="true"
+            android:id="@+id/treatment_click_here"
+             >
+
+                <com.sydehealth.sydehealth.utility.BImageView
+                    android:layout_width="@dimen/_160sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:src="@drawable/loader_background"
+                    android:id="@+id/imageView17_trmnt"
+
+                    />
+        </LinearLayout>
+
+
+
+</LinearLayout>

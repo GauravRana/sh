@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Grey_100">#F5F5F5</color>
+    <color name="Grey_200">#EEEEEE</color>
+    <color name="Grey_300">#E0E0E0</color>
+    <color name="Grey_400">#BDBDBD</color>
+    <color name="Grey_50">#FAFAFA</color>
+    <color name="Grey_500">#9E9E9E</color>
+    <color name="Grey_600">#757575</color>
+    <color name="Grey_700">#616161</color>
+    <color name="Grey_800">#424242</color>
+    <color name="Grey_900">#212121</color>
+    <color name="loader">#FCCC0B</color>
+    <color name="media_black">#66000000</color>
+    <color name="pink">#E66781</color>
+    <color name="white">#80FFFFFF</color>
+    <string name="app_name">MKPlayer</string>
+    <string name="can_not_play">can not play this video</string>
+    <string name="giraffe_player_url_empty">Please specify the address of the video playback</string>
+    <string name="not_support">player not support this device</string>
+    <string name="small_problem">Player encountered a small problem, please try again!</string>
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+
+        <!--<item name="android:windowIsTranslucent">false</item>-->
+
+    </style>
+    <style name="AppTheme.WhiteAccent">
+        <item name="colorAccent">@color/pink</item> <!-- Whatever color you want-->
+    </style>
+    <style name="CustomDialog" parent="android:style/Theme.Dialog">
+
+        <!-- Background color and transparency -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- Is there a title? -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- Whether it is above activity -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- Is fuzzy? -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowFrame">@null</item>
+
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+
+
+
+    </style>
+    <style name="image_view">
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+    <style name="loader_sharescreen" parent="AppTheme.WhiteAccent">
+
+        <item name="colorAccent">@color/loader</item>
+    </style>
+</resources>

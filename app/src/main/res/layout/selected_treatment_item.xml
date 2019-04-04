@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_treatment_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:text="Treatment option 1"
+        android:textColor="@color/pink"
+        android:textSize="@dimen/_7sdp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_treatment_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:lineSpacingExtra="@dimen/_5sdp"
+        android:text="@string/common_signin_button_text_long"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_7sdp" />
+
+    <TextView
+        android:id="@+id/txt_sub_treatment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:text="Sub Treatments"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_7sdp"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="@dimen/_4sdp"
+        android:id="@+id/rv_subtreatment_images"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        android:overScrollMode="never" />
+
+</LinearLayout>

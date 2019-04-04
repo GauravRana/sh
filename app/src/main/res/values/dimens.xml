@@ -1,0 +1,86 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="button_shadow">10dp</dimen>
+    <dimen name="top_fragment_height">200dip</dimen>
+    <dimen name="top_fragment_margin">10dip</dimen>
+    <dimen name="place_renderer_height">200dip</dimen>
+    <dimen name="tv_show_fan_art_height">150dip</dimen>
+    <dimen name="button_title_padding_left_right">10dip</dimen>
+    <dimen name="button_title_text_size">18sp</dimen>
+    <dimen name="button_title_margin_top">10dip</dimen>
+    <item name="x_scale_factor" format="float" type="dimen">2.3</item>
+    <item name="y_scale_factor" format="float" type="dimen">2.3</item>
+    <dimen name="grid_view_vertical_spacing">10dip</dimen>
+    <dimen name="grid_view_horizontal_spacing">10dip</dimen>
+    <dimen name="grid_view_margin">10dip</dimen>
+    <dimen name="divider_height">1dip</dimen>
+    <dimen name="episodes_header_padding">10dip</dimen>
+    <dimen name="episodes_header_padding_left">16dip</dimen>
+    <dimen name="episode_padding_left_right">6dip</dimen>
+    <dimen name="episode_number">38sp</dimen>
+    <dimen name="episode_title">20sp</dimen>
+    <dimen name="episode_title_margin_top">6dip</dimen>
+    <dimen name="episode_title_margin_left">8dip</dimen>
+    <dimen name="episode_publish_date_margin_left">8dip</dimen>
+    <dimen name="episode_publish_date_margin_bottom">2dip</dimen>
+    <dimen name="place_title_margin">5dip</dimen>
+    <dimen name="tv_show_title_margin_left_top">5dip</dimen>
+    <dimen name="tv_show_margin_left">5dip</dimen>
+    <dimen name="tv_show_margin_bottom">10dip</dimen>
+    <dimen name="bvp_content_inset_half">8dp</dimen>
+    <dimen name="bvp_button_size">80dp</dimen>
+    <dimen name="sett_text_size">@dimen/_7sdp</dimen>
+    <dimen name="pager_margin">5dp</dimen>
+    <dimen name="viewPagerMargin">150dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="aaa">200dip</dimen>
+    <dimen name="guideline_thickness">1px</dimen>
+    <dimen name="target_radius">24dp</dimen>
+    <dimen name="snap_radius">3dp</dimen>
+    <!--<dimen name="corner_length">20dp</dimen>-->
+    <dimen name="content_padding">16dp</dimen>
+    <dimen name="content_padding_half">8dp</dimen>
+    <dimen name="gridviewneight_width">50dp</dimen>
+    <dimen name="publisher_height">120dp</dimen>
+    <dimen name="publisher_width">90dp</dimen>
+    <dimen name="publisher_end_margin">16dp</dimen>
+    <dimen name="publisher_right_margin">16dp</dimen>
+    <dimen name="publisher_bottom_margin">16dp</dimen>
+    <dimen name="publisher_padding">2dp</dimen>
+    <dimen name="mail_text_size">@dimen/_6sdp</dimen>
+    <dimen name="mail_line_space">@dimen/_2sdp</dimen>
+
+    <dimen name="setting_edit_text_width">@dimen/_150sdp</dimen>
+    <dimen name="setting_edit_text_height">@dimen/_18sdp</dimen>
+
+    <dimen name="spacing_micro">4dp</dimen>
+
+    <dimen name="spacing_normal">8dp</dimen>
+
+    <dimen name="spacing_double">16dp</dimen>
+
+    <dimen name="spacing_huge">72dp</dimen>
+
+    <dimen name="elevation_header">4dp</dimen>
+
+    <dimen name="elevation_fab">8dp</dimen>
+
+    <dimen name="size_icon_toolbar">40dp</dimen>
+
+    <integer name="anim_duration_very_long">1500</integer>
+
+    <integer name="anim_duration_long">500</integer>
+
+    <integer name="anim_duration_medium">300</integer>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+
+
+    <dimen name="shadow_size">8dp</dimen>
+    <dimen name="layer_size">300dp</dimen>
+    <dimen name="preview_offset_distance">150dp</dimen>
+    <dimen name="offset_distance">48dp</dimen>
+
+</resources>

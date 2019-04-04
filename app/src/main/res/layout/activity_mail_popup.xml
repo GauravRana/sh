@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/mail_black"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/root_blur"
+        android:weightSum="1"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight=".9"
+            android:orientation="vertical"
+            android:layout_height="0dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/list_layer"
+                android:visibility="visible"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_height="@dimen/_60sdp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:orientation="vertical"
+                        android:layout_weight=".1"
+                        android:gravity="center"
+                        android:layout_height="match_parent">
+                        <ImageButton
+                            android:id="@+id/left_move"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:src="@mipmap/left_move"
+                            android:background="@android:color/transparent"
+                            />
+                    </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/screenshot_listview"
+                    android:layout_width="0dp"
+                    android:visibility="visible"
+                    android:layout_weight=".8"
+                    android:isScrollContainer="false"
+                    android:layout_height="match_parent">
+                </androidx.recyclerview.widget.RecyclerView>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight=".1"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:src="@mipmap/right_move"
+                            android:visibility="gone"
+                            android:id="@+id/right_move"/>
+                    </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/pading_layer"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_height="@dimen/_20sdp"></LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/_100sdp"
+                android:layout_marginRight="@dimen/_100sdp"
+                android:background="@color/transparentGray"
+                android:weightSum="1"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/drag_layer"
+                    android:layout_height="match_parent">
+
+                    <ScrollView
+                        android:id="@+id/scrollView1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
+                        <LinearLayout
+                            android:gravity="center|top"
+                            android:orientation="vertical"
+                            android:layout_width="fill_parent"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_height="fill_parent" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:gravity="center"
+                                android:background="@color/white"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:layout_height="@dimen/_50sdp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/_10sdp"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:gravity="center|top"
+                                    android:id="@+id/title_txt"
+                                    android:textSize="@dimen/mail_text_size"
+                                    android:lineSpacingExtra="@dimen/mail_line_space"
+                                    android:text="@string/mail_txt"
+                                    android:textColor="@color/black_mail_text"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:id="@+id/select_new_condition_layer"
+                                android:layout_height="wrap_content">
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:textColor="@color/new_blue"
+                                    android:textAllCaps="true"
+                                    android:gravity="center"
+                                    android:textSize="@dimen/_6sdp"
+                                    android:id="@+id/select_first_condition"
+                                    android:background="@color/white"
+                                    android:text="Select Condition"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="vertical"
+                                android:id="@+id/condition_details"
+                                android:gravity="center"
+                                android:visibility="gone"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white"
+                                    android:orientation="vertical">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:orientation="horizontal"
+                                        android:weightSum="1"
+                                        android:layout_marginTop="@dimen/_6sdp"
+                                        android:layout_height="@dimen/_25sdp">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_weight=".22"
+                                            android:layout_height="wrap_content">
+
+                                        </LinearLayout>
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_weight=".56"
+                                            android:layout_height="wrap_content">
+                                            <Button
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:textColor="@color/pink"
+                                                android:textAllCaps="true"
+                                                android:gravity="center"
+                                                android:textSize="@dimen/_8sdp"
+                                                android:id="@+id/select_new_condition"
+                                                android:background="@android:color/transparent"
+                                                />
+                                        </LinearLayout>
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_weight=".22"
+                                            android:layout_height="wrap_content">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:orientation="vertical"
+                                                android:gravity="center"
+                                                android:visibility="gone"
+                                                android:id="@+id/change_condition_layer"
+                                                android:layout_height="match_parent">
+                                                <Button
+                                                    android:layout_width="@dimen/_35sdp"
+                                                    android:layout_height="@dimen/_14sdp"
+                                                    android:textColor="@color/pink"
+                                                    android:textAllCaps="true"
+                                                    android:textSize="@dimen/_5sdp"
+                                                    android:id="@+id/change_condition"
+                                                    android:background="@drawable/rounded_btn_white"
+                                                    android:text="Edit"/>
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:orientation="horizontal"
+                                        android:gravity="center"
+                                        android:layout_marginTop="@dimen/_5sdp"
+                                        android:layout_height="wrap_content">
+
+                                        <RelativeLayout
+                                            android:layout_width="@dimen/_106sdp"
+                                            android:gravity="center"
+                                            android:id="@+id/video_layer"
+                                            android:layout_marginRight="@dimen/_6sdp"
+                                            android:layout_height="@dimen/_60sdp">
+                                            <com.sydehealth.sydehealth.utility.BImageView
+                                                android:layout_width="match_parent"
+                                                android:id="@+id/condition_video_thumb"
+                                                android:layout_height="match_parent" />
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:gravity="center"
+                                                android:layout_height="match_parent">
+                                                <ImageView
+                                                    android:layout_width="@dimen/_15sdp"
+                                                    android:src="@mipmap/play_icon"
+                                                    android:layout_height="@dimen/_15sdp" />
+                                            </LinearLayout>
+                                        </RelativeLayout>
+                                        <com.sydehealth.sydehealth.utility.BImageView
+                                            android:layout_width="@dimen/_106sdp"
+                                            android:layout_marginLeft="@dimen/_6sdp"
+                                            android:id="@+id/condition_img_thumb"
+                                            android:layout_height="@dimen/_60sdp" />
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_marginLeft="@dimen/_20sdp"
+                                        android:layout_marginRight="@dimen/_20sdp"
+                                        android:layout_marginBottom="@dimen/_5sdp"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:id="@+id/desciption_layer"
+                                        android:layout_height="wrap_content">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:textSize="@dimen/mail_text_size"
+                                            android:lineSpacingExtra="@dimen/mail_line_space"
+                                            android:gravity="center"
+                                            android:id="@+id/condition_desc"
+                                            android:textColor="@color/black_mail_text"
+                                            android:layout_height="wrap_content" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="vertical"
+                                    android:background="@color/white"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_25sdp">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:textColor="@color/black_mail_text"
+                                            android:textAllCaps="true"
+                                            android:id="@+id/prevention_advice_label"
+                                            android:textSize="@dimen/_8sdp"
+
+                                            android:text="@string/prevention_advice_video"/>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginTop="@dimen/_5sdp"
+                                        android:gravity="center">
+                                        <RelativeLayout
+                                            android:layout_width="@dimen/_106sdp"
+                                            android:gravity="center"
+                                            android:id="@+id/prevention_layer"
+                                            android:layout_height="@dimen/_60sdp">
+                                            <com.sydehealth.sydehealth.utility.BImageView
+                                                android:layout_width="match_parent"
+                                                android:id="@+id/prevention_video_thumb"
+                                                android:layout_height="match_parent" />
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:gravity="center"
+                                                android:layout_height="match_parent">
+                                                <ImageView
+                                                    android:layout_width="@dimen/_15sdp"
+                                                    android:src="@mipmap/play_icon"
+                                                    android:layout_height="@dimen/_15sdp" />
+                                            </LinearLayout>
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_marginLeft="@dimen/_20sdp"
+                                        android:layout_marginRight="@dimen/_20sdp"
+                                        android:layout_marginBottom="@dimen/_15sdp"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:textSize="@dimen/mail_text_size"
+                                        android:lineSpacingExtra="@dimen/mail_line_space"
+                                        android:id="@+id/prevention_advice"
+                                        android:textColor="@color/black_mail_text"/>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:visibility="gone"
+                                android:id="@+id/select_new_treatment_layer"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:layout_height="wrap_content">
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:textColor="@color/new_blue"
+                                    android:textAllCaps="true"
+                                    android:textSize="@dimen/_6sdp"
+                                    android:id="@+id/select_first_treatment"
+                                    android:background="@color/white"
+                                    android:text="Select Treatment Options"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:gravity="left|center"
+                                android:id="@+id/treatment_details"
+                                android:visibility="gone"
+                                android:orientation="vertical"
+                                android:background="@color/white"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:weightSum="1"
+                                    android:orientation="horizontal"
+                                    android:layout_height="@dimen/_30sdp">
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".22"></LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight=".56">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_8sdp"
+                                            android:gravity="center"
+                                            android:layout_marginTop="@dimen/_10sdp"
+                                            android:visibility="gone"
+                                            android:textAllCaps="true"
+                                            android:id="@+id/treatment_option_label"
+                                            android:text="Treatment options"/>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight=".22">
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:orientation="horizontal"
+                                            android:gravity="center"
+                                            android:visibility="gone"
+                                            android:id="@+id/change_treatment_layer"
+                                            android:layout_height="match_parent">
+                                            <Button
+                                                android:layout_width="@dimen/_35sdp"
+                                                android:layout_height="@dimen/_14sdp"
+                                                android:textColor="@color/pink"
+                                                android:textAllCaps="true"
+                                                android:textSize="@dimen/_5sdp"
+                                                android:background="@drawable/rounded_btn_white"
+                                                android:layout_marginTop="@dimen/_5sdp"
+                                                android:id="@+id/change_treatment"
+                                                android:text="Edit"/>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginRight="@dimen/_10sdp"
+                                    android:layout_marginBottom="@dimen/_10sdp"
+                                    android:layout_height="wrap_content">
+
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:id="@+id/treatment_options_items"
+                                        android:orientation="vertical"
+                                        android:layout_height="wrap_content">
+
+                                    </LinearLayout>
+
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:id="@+id/mail_cmnt_area"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:background="@color/white"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_marginLeft="@dimen/_16sdp"
+                                    android:layout_marginRight="@dimen/_16sdp"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/mail_cmnt"
+                                    android:gravity="center"
+                                    android:textSize="@dimen/_8sdp"
+                                    android:text="@string/title_screenshot"
+                                    android:textColor="@color/black_mail_text"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:id="@+id/screenshot_layer"
+                                    android:orientation="vertical"
+                                    android:layout_marginRight="@dimen/_33sdp"
+                                    android:layout_marginLeft="@dimen/_33sdp"
+                                    android:layout_marginBottom="@dimen/_15sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="gone"
+                                        android:layout_margin="@dimen/_10sdp"
+                                        android:id="@+id/drop_text"
+                                        />
+
+                                    <com.sydehealth.sydehealth.utility.ExpandableHeightGridView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/attactment_gv"
+                                        android:gravity="center"
+                                        android:drawSelectorOnTop="true"
+                                        android:numColumns="2"
+                                        android:stretchMode="columnWidth"
+                                        android:verticalSpacing="@dimen/_5sdp"
+                                        >
+
+                                    </com.sydehealth.sydehealth.utility.ExpandableHeightGridView>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/advert"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight=".1"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_13sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/jukepad_text"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".4"
+                android:orientation="horizontal"
+                android:gravity="center|left"
+                android:layout_height="match_parent">
+                <Button
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:id="@+id/mail_cross"
+                    android:background="@drawable/rounded_btn_white"
+                    android:textSize="@dimen/_6sdp"
+                    android:textAllCaps="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:textColor="@color/pink"
+                    android:text="@string/cancel"
+                    />
+
+                <Button
+                    android:id="@+id/signout_btn_mail"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:background="@drawable/rounded_btn"
+                    android:textSize="@dimen/_6sdp"
+                    android:textAllCaps="true"
+                    android:text="@string/send" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

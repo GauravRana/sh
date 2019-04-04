@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_new"
+    tools:context="com.sydehealth.sydehealth.main.Screenshare_instruction_page">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_77sdp"
+            android:textSize="@dimen/_12sdp"
+            android:id="@+id/instruction"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="@string/screenshare_instruction"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="@dimen/_300sdp"
+            android:background="@drawable/white_round_bg"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:layout_height="@dimen/_145sdp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight=".5"
+                android:gravity="center|top"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="@dimen/_45sdp"
+                    android:src="@drawable/computer_icon"
+                    android:layout_marginTop="@dimen/_22sdp"
+                    android:layout_height="@dimen/_40sdp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:gravity="center"
+                    android:id="@+id/step1"
+                    android:text="Step 1"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:id="@+id/computer_txt"
+                    android:gravity="center"
+                    android:text="Go to your\ncomputer"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/instruction_line"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:orientation="vertical"
+                android:gravity="center|top"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="@dimen/_45sdp"
+                    android:src="@drawable/search_icon"
+                    android:layout_marginTop="@dimen/_22sdp"
+                    android:layout_height="@dimen/_40sdp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/_12sdp"
+                    android:id="@+id/step2"
+                    android:textColor="@color/black"
+                    android:text="Step 2"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:id="@+id/search_txt"
+
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/_5sdp"
+                    android:textColor="@color/stats"
+                    android:gravity="center"
+                    android:id="@+id/chrome_txt"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="We recommend using Chrome"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/skip_btn"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_23sdp"
+                android:background="@drawable/circle_layout"
+                android:text="Skip"
+                android:textAllCaps="false"
+                android:layout_marginRight="@dimen/_220sdp"
+                android:textSize="@dimen/_8sdp" />
+            <Button
+                android:id="@+id/done_btn"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_23sdp"
+                android:text="Done"
+                android:background="@drawable/edit_round_pink_bg"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_8sdp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

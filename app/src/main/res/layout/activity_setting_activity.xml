@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/root"
+    android:background="@drawable/background_new"
+    android:layoutAnimation="@anim/layoutanimation"
+    tools:layoutAnimation="@null"
+    tools:context="com.sydehealth.sydehealth.main.Setting_activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/setting_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+        <com.sydehealth.sydehealth.utility.LockableScrollView
+            android:layout_width="match_parent"
+            android:id="@+id/main_scrollview"
+            android:scrollbars="none"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/root_layer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="left|top"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_123sdp"
+                            android:layout_height="@dimen/_193sdp"
+                            android:layout_marginTop="@dimen/_35sdp"
+                            android:layout_marginLeft="@dimen/_12sdp"
+                            android:background="@drawable/treatment_back">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:orientation="vertical"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center|left"
+                                    android:id="@+id/profile_layer"
+                                    android:layout_height="@dimen/_31sdp">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_12sdp"
+                                        android:layout_marginLeft="@dimen/_14sdp"
+                                        android:layout_marginRight="@dimen/_10sdp"
+                                        android:background="@android:color/transparent"
+                                        android:src="@drawable/profile"
+                                        android:layout_height="@dimen/_13sdp" />
+                                    <TextView
+                                        android:id="@+id/tv_profile"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_8sdp"
+                                        android:text="@string/profile"/>
+
+
+                                </LinearLayout>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/divider"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center|left"
+                                    android:id="@+id/device_layer"
+                                    android:layout_height="@dimen/_31sdp">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_12sdp"
+                                        android:layout_marginLeft="@dimen/_14sdp"
+                                        android:layout_marginRight="@dimen/_10sdp"
+                                        android:src="@drawable/device"
+                                        android:background="@android:color/transparent"
+                                        android:layout_height="@dimen/_14sdp" />
+                                    <TextView
+                                        android:id="@+id/tv_Device"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_8sdp"
+                                        android:text="@string/device"/>
+
+
+                                </LinearLayout>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/divider"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center|left"
+                                    android:id="@+id/about_layer"
+                                    android:layout_height="@dimen/_31sdp">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_13sdp"
+                                        android:layout_marginLeft="@dimen/_14sdp"
+                                        android:layout_marginRight="@dimen/_10sdp"
+                                        android:src="@drawable/about"
+                                        android:background="@android:color/transparent"
+                                        android:layout_height="@dimen/_13sdp" />
+                                    <TextView
+                                        android:id="@+id/tv_About"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_8sdp"
+                                        android:text="@string/about"/>
+
+
+                                </LinearLayout>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/divider"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:gravity="center|left"
+                                    android:id="@+id/sign_out_layer"
+                                    android:layout_marginTop="@dimen/_64sdp"
+                                    android:layout_height="@dimen/_31sdp">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_15sdp"
+                                        android:layout_marginLeft="@dimen/_14sdp"
+                                        android:layout_marginRight="@dimen/_10sdp"
+                                        android:src="@drawable/signout"
+                                        android:background="@android:color/transparent"
+                                        android:layout_height="@dimen/_10sdp" />
+                                    <TextView
+                                        android:id="@+id/tv_signOut"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_8sdp"
+                                        android:text="@string/signout"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_31sdp"
+                            android:gravity="center|left"
+                            android:textColor="@color/white"
+                            android:id="@+id/title"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_marginLeft="@dimen/_19sdp"
+                            android:textSize="@dimen/_12sdp"
+                            android:text="@string/profile"/>
+
+                        <TextView
+                            android:layout_width="@dimen/_335sdp"
+                            android:background="@color/stats"
+                            android:layout_marginLeft="@dimen/_12sdp"
+                            android:layout_marginRight="@dimen/_12sdp"
+                            android:layout_height="1dp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/profile_data"
+                            android:visibility="visible"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="@dimen/_12sdp"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/EditTextTheme"
+                                    android:layout_width="@dimen/_123sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:id="@+id/user_name_layer"
+                                    android:visibility="visible"
+                                    android:paddingTop="@dimen/_3sdp"
+                                    android:background="@drawable/white_round_bg"
+                                    android:textColorHint="@color/gray"
+                                    app:hintTextAppearance="@style/EditTextTheme">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/user_name"
+                                        style="@style/EditTextTheme"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@null"
+                                        android:hint="@string/sett_user_name"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textPersonName|textNoSuggestions"
+                                        android:nextFocusDown="@+id/pswd"
+                                        android:paddingLeft="@dimen/_8sdp"
+                                        android:paddingRight="@dimen/_8sdp"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:layout_marginBottom="@dimen/_8sdp"
+                                        android:singleLine="true"
+                                        android:maxLength="20"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/gray"
+                                        android:textSize="@dimen/_8sdp" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <TextView
+                                    android:layout_width="@dimen/_22sdp"
+                                    android:layout_height="match_parent"
+                                    android:textColor="@color/new_blue"
+                                    android:layout_margin="@dimen/_6sdp"
+                                    android:gravity="center"
+                                    android:id="@+id/info_user"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:text="@string/ic_info"/>
+                                <TextView
+                                    android:id="@+id/unInfo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:textColor="@color/white"
+                                    android:gravity="center|left"
+                                    android:textSize="@dimen/_8sdp"
+                                    android:text="This is the name that will be presented when sending out an email"/>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="@dimen/_335sdp"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@color/stats"
+                                android:layout_height="1dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_12sdp"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/EditTextTheme"
+                                    android:layout_width="@dimen/_123sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:id="@+id/user_email_layer"
+                                    android:visibility="visible"
+                                    android:paddingTop="@dimen/_3sdp"
+                                    android:background="@drawable/white_round_bg"
+                                    android:textColorHint="@color/gray"
+                                    app:hintTextAppearance="@style/EditTextTheme">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/user_email"
+                                        style="@style/EditTextTheme"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@null"
+                                        android:hint="@string/email_hint"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textNoSuggestions|textEmailAddress"
+                                        android:nextFocusDown="@+id/pswd"
+                                        android:paddingLeft="@dimen/_8sdp"
+                                        android:paddingRight="@dimen/_8sdp"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:layout_marginBottom="@dimen/_8sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/gray"
+                                        android:textSize="@dimen/_8sdp" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="@dimen/_335sdp"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@color/stats"
+                                android:layout_height="1dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:layout_marginBottom="@dimen/_8sdp"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/EditTextTheme"
+                                    android:layout_width="@dimen/_123sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:id="@+id/new_pswd_layer"
+                                    android:visibility="visible"
+                                    android:paddingTop="@dimen/_3sdp"
+                                    android:background="@drawable/white_round_bg"
+                                    android:textColorHint="@color/gray"
+                                    app:hintTextAppearance="@style/EditTextTheme">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/new_pswd"
+                                        style="@style/EditTextTheme"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@null"
+                                        android:hint="@string/new_pswd"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textWebPassword"
+                                        android:nextFocusDown="@+id/pswd"
+                                        android:paddingLeft="@dimen/_8sdp"
+                                        android:paddingRight="@dimen/_8sdp"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:layout_marginBottom="@dimen/_8sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/gray"
+                                        android:textSize="@dimen/_8sdp" />
+
+
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <TextView
+                                    android:layout_width="@dimen/_22sdp"
+                                    android:layout_height="match_parent"
+                                    android:textColor="@color/new_blue"
+                                    android:layout_margin="@dimen/_6sdp"
+                                    android:gravity="center"
+                                    android:id="@+id/info_pswd"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:text="@string/ic_info"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:textColor="@color/white"
+                                    android:id="@+id/info_pswd_txt"
+                                    android:gravity="center|left"
+                                    android:textSize="@dimen/_8sdp"
+                                    android:text="Must be 8 characters long and include one\n digit"/>
+
+
+                            </LinearLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/EditTextTheme"
+                                android:layout_width="@dimen/_123sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:id="@+id/confirm_pswd_layer"
+                                android:visibility="visible"
+                                android:paddingTop="@dimen/_3sdp"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginBottom="@dimen/_12sdp"
+                                android:background="@drawable/white_round_bg"
+                                android:textColorHint="@color/gray"
+                                app:hintTextAppearance="@style/EditTextTheme">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/confirm_pswd"
+                                    style="@style/EditTextTheme"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@null"
+                                    android:hint="@string/cnfrm_pswd"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="textWebPassword"
+                                    android:nextFocusDown="@+id/pswd"
+                                    android:paddingLeft="@dimen/_8sdp"
+                                    android:paddingRight="@dimen/_8sdp"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:layout_marginBottom="@dimen/_8sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/gray"
+                                    android:textSize="@dimen/_8sdp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="@dimen/_335sdp"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@color/stats"
+                                android:layout_height="1dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:layout_height="wrap_content">
+                                <Button
+                                    android:layout_width="@dimen/_44sdp"
+                                    android:background="@drawable/edit_round_pink_bg"
+                                    android:text="@string/save"
+                                    android:id="@+id/save_details_btn"
+                                    android:textSize="@dimen/_8sdp"
+                                    android:layout_height="@dimen/_23sdp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/device_data"
+                            android:visibility="gone"
+                            android:layout_margin="@dimen/_12sdp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|top|left"
+                                android:orientation="vertical">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_50sdp"
+                                    android:gravity="center|left"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/bright_label"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:text="Brightness"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/sett_text_size" />
+
+                                    <SeekBar
+                                        android:id="@+id/brightness_seekBar"
+                                        android:layout_width="@dimen/_160sdp"
+                                        android:layout_height="@dimen/_30sdp"
+                                        android:max="255"
+                                        android:progressTint="@color/white"
+                                        android:thumbTint="@color/white" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="@dimen/_335sdp"
+                                    android:background="@color/stats"
+                                    android:layout_height="1dp"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:id="@+id/wifi_btn"
+                                    android:gravity="center|left"
+                                    android:layout_height="@dimen/_60sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="left"
+                                        android:focusable="true"
+                                        android:focusableInTouchMode="true"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/tv_wifi"
+                                            android:layout_width="@dimen/_30sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="@dimen/_5sdp"
+                                            android:gravity="center"
+                                            android:text="Wifi"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/sett_text_size" />
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_30sdp"
+                                            android:layout_height="wrap_content"
+                                            android:focusableInTouchMode="false"
+                                            android:focusable="true"
+                                            android:background="@android:color/transparent"
+                                            android:src="@mipmap/wifi_icon" />
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:gravity="center|left"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/wifi_name"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:paddingTop="@dimen/_22sdp"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/sett_text_size" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="@dimen/_335sdp"
+                                    android:background="@color/stats"
+                                    android:layout_height="1dp"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:id="@+id/bluetooth_btn"
+                                    android:visibility="visible"
+                                    android:gravity="center|left"
+                                    android:layout_height="@dimen/_60sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="left"
+                                        android:focusable="true"
+                                        android:focusableInTouchMode="true"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/tv_Bluetooth"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="@dimen/_5sdp"
+                                            android:gravity="center"
+                                            android:text="Bluetooth"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/sett_text_size" />
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_30sdp"
+                                            android:layout_height="wrap_content"
+                                            android:focusableInTouchMode="false"
+                                            android:focusable="true"
+                                            android:background="@android:color/transparent"
+                                            android:src="@mipmap/wifi_icon" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="@dimen/_335sdp"
+                                    android:background="@color/stats"
+                                    android:visibility="visible"
+                                    android:layout_height="1dp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/about_data"
+                            android:visibility="gone"
+                            android:layout_margin="@dimen/_12sdp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:id="@+id/app_desc"
+                                android:visibility="gone"
+                                android:gravity="center|left"
+                                android:textSize="@dimen/sett_text_size"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:id="@+id/app_version"
+                                android:gravity="center|left"
+                                android:text="@string/app_version"
+                                android:textSize="@dimen/sett_text_size"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:id="@+id/extra_space"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_145sdp">
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.sydehealth.sydehealth.utility.LockableScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/keyboard_extra_key"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_height="@dimen/_20sdp"
+            android:background="#DBDDE2">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8sdp"
+                android:textAllCaps="false"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:background="@drawable/rounded_key"
+                android:text="@string/yahoo"
+                android:id="@+id/yahoo_txt"
+                android:gravity="center"
+                android:layout_height="@dimen/_17sdp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8sdp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:background="@drawable/rounded_key"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:id="@+id/outlook_txt"
+                android:text="@string/outlook"
+                android:layout_height="@dimen/_17sdp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8sdp"
+                android:gravity="center"
+                android:paddingLeft="@dimen/_5sdp"
+                android:background="@drawable/rounded_key"
+                android:paddingRight="@dimen/_5sdp"
+                android:textAllCaps="false"
+                android:id="@+id/gmail_txt"
+                android:text="@string/gmail"
+                android:layout_height="@dimen/_17sdp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

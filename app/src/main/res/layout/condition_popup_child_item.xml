@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_50sdp"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/_4sdp">
+
+
+        <ImageView
+            android:id="@+id/thumb_icon"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_23sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/round_rect_pink" />
+
+
+        <TextView
+            android:id="@+id/txt_condition_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:text="Broken Tooth"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_7sdp" />
+
+        <ImageView
+            android:id="@+id/iv_select"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:background="@drawable/circle_grey_outline"
+            android:padding="@dimen/_2sdp" />
+
+    </LinearLayout>
+
+</LinearLayout>

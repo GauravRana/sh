@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context="com.sydehealth.sydehealth.main.Login_activity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="matrix"
+        android:background="@drawable/background_new" />
+
+    <com.sydehealth.sydehealth.utility.LockableScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/main_scrollview_one"
+        android:scrollbars="none"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_77sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:src="@drawable/logo_new" />
+
+
+                <TextView
+                    android:id="@+id/tv_first"
+                    android:layout_width="@dimen/_224sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_22sdp"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    android:text="As it's your first time here, we need you to change your password"/>
+
+
+                <TextView
+                    android:layout_width="@dimen/_168sdp"
+                    android:layout_height="@dimen/_23sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:textSize="@dimen/_7sdp"
+                    android:maxLines="2"
+                    android:id="@+id/tv_sec"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:text="Make it at least 8 characters long and remember to include one special character"/>
+                <LinearLayout
+                    android:layout_width="@dimen/_123sdp"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:id="@+id/login_view"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/EditTextTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_28sdp"
+                        android:id="@+id/new_pswd_layer"
+                        android:visibility="visible"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:background="@drawable/white_round_bg"
+                        android:textColorHint="@color/gray"
+                        app:hintTextAppearance="@style/EditTextTheme">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/new_pswd"
+                            style="@style/EditTextTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:hint="@string/new_pswd"
+                            android:imeOptions="actionNext"
+                            android:inputType="textWebPassword"
+                            android:nextFocusDown="@+id/pswd"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray"
+                            android:textSize="@dimen/_8sdp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/new_pswd_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:gravity="center|right"
+                        android:text=""
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/_5sdp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/EditTextTheme"
+                        android:id="@+id/confirm_pswd_layer"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_28sdp"
+                        android:background="@drawable/white_round_bg"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:textColorHint="@color/gray"
+                        app:hintTextAppearance="@style/EditTextTheme">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/confirm_pswd"
+                            style="@style/EditTextTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:hint="@string/cnfrm_pswd"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:inputType="textWebPassword"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray"
+                            android:textSize="@dimen/_8sdp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/confirm_pswd_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:gravity="center|right"
+                        android:text=""
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/_5sdp" />
+
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_123sdp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sign_in_btn_layer"
+                        android:gravity="end"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/set_pwd"
+                            android:layout_width="@dimen/_74sdp"
+                            android:layout_height="@dimen/_23sdp"
+                            android:background="@drawable/edit_round_pink_bg"
+                            android:text="@string/set_pwd"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_8sdp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_123sdp"
+                        android:layout_height="@dimen/_150sdp">
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </com.sydehealth.sydehealth.utility.LockableScrollView>
+
+</RelativeLayout>
